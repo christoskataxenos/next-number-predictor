@@ -28,7 +28,11 @@ It calculates the R² score for the statistical models and selects the one with 
     cd next-number-predictor
     pip install -r requirements.txt
     ```
-2.  **Run:**
+2.  **Quick Start (Automated Scripts):**
+    - **Windows:** Double-click `run.bat` or `run.ps1`.
+    - **Linux / macOS:** Run `chmod +x run.sh && ./run.sh`.
+
+3.  **Manual Execution:**
     ```bash
     python predict_next.py
     ```
@@ -59,7 +63,11 @@ It calculates the R² score for the statistical models and selects the one with 
     cd next-number-predictor
     pip install -r requirements.txt
     ```
-2.  **Εκτέλεση:**
+2.  **Γρήγορη Εκκίνηση (Αυτοματοποιημένα Scripts):**
+    - **Windows:** Διπλό κλικ στο `run.bat` ή `run.ps1`.
+    - **Linux / macOS:** Εκκίνηση με `chmod +x run.sh && ./run.sh`.
+
+3.  **Χειροκίνητη Εκτέλεση:**
     ```bash
     python predict_next.py
     ```
