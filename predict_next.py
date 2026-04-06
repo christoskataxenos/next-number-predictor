@@ -284,7 +284,8 @@ def launch_gui():
         update_texts()
 
     lang_button = ctk.CTkButton(bottom_frame, command=toggle_language, text=get_text("gui_btn_lang"),
-                                font=primary_font, height=35, corner_radius=10, fg_color="transparent", border_width=1)
+                                font=primary_font, height=35, corner_radius=10, fg_color="transparent", 
+                                border_width=1, text_color=("#333333", "#DCE4EE"), border_color=("#A9A9A9", "#2A2D2E"))
     lang_button.pack(side="left")
 
     close_button = ctk.CTkButton(bottom_frame, command=root.destroy, text=get_text("gui_btn_close"),
