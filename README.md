@@ -1,60 +1,68 @@
-# 🔮 Next Number Predictor – Πρόβλεψη Επόμενου Αριθμού
+# 🔮 Next Number Predictor
 
-Μια εφαρμογή Python με γραφικό περιβάλλον (GUI) που προβλέπει τον επόμενο αριθμό μιας ακολουθίας χρησιμοποιώντας διάφορους αλγορίθμους και στατιστικά μοντέλα.
-
-## 📌 Χαρακτηριστικά
-
-Η εφαρμογή έχει αναβαθμιστεί ριζικά και πλέον προσφέρει ένα **υπερσύγχρονο περιβάλλον εργασίας**:
-
-*   **Μοντέρνο GUI (CustomTkinter):** Χρήση της βιβλιοθήκης `customtkinter` για μια premium εμφάνιση που ξεφεύγει από το κλασικό tkinter.
-*   **Light Mode Optimization:** Σχεδιασμένο ειδικά για Light Mode με καθαρή, φωτεινή και ξεκούραστη αισθητική.
-*   **Πολυλωσσική Υποστήριξη:** Πλήρης υποστήριξη για **Ελληνικά** και **Αγγλικά**.
-*   **Πολλαπλοί Αλγόριθμοι Πρόβλεψης:**
-    *   **Αριθμητική Πρόοδος:** Ανίχνευση σταθερής διαφοράς.
-    *   **Γεωμετρική Πρόοδος:** Ανίχνευση σταθερού λόγου.
-    *   **Ακολουθία Fibonacci:** Ανίχνευση αθροίσματος προηγούμενων όρων.
-    *   **Γραμμική Παλινδρόμηση:** Προσαρμογή ευθείας (Linear Regression) μέσω `numpy`.
-    *   **Πολυωνυμική Πρόβλεψη:** Προσαρμογή καμπύλης 2ου βαθμού (Quadratic) για πιο σύνθετες ακολουθίες.
-*   **Έξυπνη Επιλογή Μοντέλου:** Αυτόματη επιλογή του καταλληλότερου μοντέλου με βάση το R² score (εμπιστοσύνη).
-*   **Ευελιξία Εισαγωγής:** Υποστήριξη αριθμών χωρισμένων με κόμμα ή κενό.
-*   **Λειτουργίες Context Menu:** Υποστήριξη δεξιού κλικ (Αντιγραφή, Αποκοπή, Επικόλληση) και συντομεύσεων πληκτρολογίου (ακόμα και με ελληνικό πληκτρολόγιο).
-
-## 📦 Απαιτήσεις
-
-- Python 3.6+
-- Βιβλιοθήκη `numpy`
-- Βιβλιοθήκη `customtkinter`
-
-## 🚀 Γρήγορη Εκκίνηση
-
-Ο πιο εύκολος τρόπος για να τρέξετε την εφαρμογή είναι να χρησιμοποιήσετε τα αρχεία αυτόματης εκκίνησης:
-
-- **Windows:** Διπλό κλικ στο `run.bat` (ή `run.ps1`).
-- **Linux / macOS:** 
-  ```bash
-  chmod +x run.sh
-  ./run.sh
-  ```
-
-### Χειροκίνητη Εκτέλεση
-
-Αν προτιμάτε το τερματικό:
-```bash
-# Εγκατάσταση εξαρτήσεων
-pip install -r requirements.txt
-
-# Εκτέλεση εφαρμογής
-python predict_next.py
-```
-
-## 🛠️ Τεχνική Ανάλυση
-
-Το project χρησιμοποιεί τη βιβλιοθήκη `numpy` για μαθηματικούς υπολογισμούς:
-- `np.polyfit` για την προσαρμογή πολυωνύμων.
-- `np.diff` για τον υπολογισμό διαφορών μεταξύ των όρων.
-- Προσαρμοσμένο `r2_score` για την αξιολόγηση της ακρίβειας των μοντέλων.
-
-Το GUI είναι βασισμένο στην βιβλιοθήκη **CustomTkinter** (σε Light Mode), προσφέροντας στρογγυλεμένες γωνίες, μοντέρνα hover effects και βελτιωμένη τυπογραφία (Segoe UI / Inter).
+A Python tool that identifies mathematical patterns in a sequence and predicts the next value using regression and progression models.
 
 ---
-*Αυτό το project αποτελεί fork του [thecretanguy/next-number-predictor](https://github.com/thecretanguy/next-number-predictor) με εκτεταμένες βελτιώσεις στο GUI και τους αλγορίθμους.*
+
+## 🇬🇧 English Guide
+
+### What this app does
+The sequence predictor takes a string of numbers and attempts to find the underlying rule. It handles everything from simple arithmetic offsets to complex quadratic curves, providing a prediction with a confidence score (R²).
+
+### How it works
+The tool evaluates the input against five distinct mathematical models in order of complexity:
+1.  **Arithmetic Progression**: Checks for a constant difference between terms.
+2.  **Geometric Progression**: Checks for a constant ratio between terms.
+3.  **Fibonacci-like Sequence**: Verifies if each term is the sum of the previous two.
+4.  **Linear Regression**: Fits a straight line ($y = mx + b$) using `numpy.polyfit`.
+5.  **Polynomial Prediction (Degree 2)**: Fits a quadratic curve ($y = ax^2 + bx + c$) for non-linear growth.
+
+It calculates the R² score for the statistical models and selects the one with the highest confidence.
+
+### Installation & Running
+**Prerequisites:** Python 3.8+ and `numpy`.
+
+1.  **Clone and Install:**
+    ```bash
+    git clone https://github.com/christoskataxenos/next-number-predictor.git
+    cd next-number-predictor
+    pip install -r requirements.txt
+    ```
+2.  **Run:**
+    ```bash
+    python predict_next.py
+    ```
+
+---
+
+## 🇬🇷 Ελληνικός Οδηγός
+
+### Τι κάνει η εφαρμογή
+Αυτή η εφαρμογή αναλύει ακολουθίες αριθμών και προβλέπει την επόμενη τιμή. Εντοπίζει αυτόματα το μαθηματικό πρότυπο που διέπει τη σειρά, από απλές προόδους μέχρι σύνθετες παραβολικές καμπύλες.
+
+### Πώς λειτουργεί
+Η εφαρμογή αξιολογεί τα δεδομένα μέσω πέντε μοντέλων:
+1.  **Αριθμητική Πρόοδος**: Αναζήτηση σταθερής διαφοράς.
+2.  **Γεωμετρική Πρόοδος**: Αναζήτηση σταθερού λόγου.
+3.  **Ακολουθία Fibonacci**: Έλεγχος αν κάθε όρος είναι το άθροισμα των δύο προηγούμενων.
+4.  **Γραμμική Παλινδρόμηση**: Προσαρμογή ευθείας γραμμής μέσω `numpy`.
+5.  **Πολυωνυμική Πρόβλεψη (2ου βαθμού)**: Προσαρμογή τετραγωνικής καμπύλης για μη γραμμική αύξηση.
+
+Το σύστημα επιλέγει το μοντέλο με το υψηλότερο σκορ εμπιστοσύνης (R²).
+
+### Εγκατάσταση & Εκτέλεση
+**Προαπαιτούμενα:** Python 3.8+ και `numpy`.
+
+1.  **Λήψη και Εγκατάσταση:**
+    ```bash
+    git clone https://github.com/christoskataxenos/next-number-predictor.git
+    cd next-number-predictor
+    pip install -r requirements.txt
+    ```
+2.  **Εκτέλεση:**
+    ```bash
+    python predict_next.py
+    ```
+
+---
+*Based on the original logic by [thecretanguy](https://github.com/thecretanguy/next-number-predictor).*
